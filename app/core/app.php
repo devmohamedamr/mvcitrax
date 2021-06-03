@@ -4,8 +4,8 @@ namespace itrax\core;
 
 class app{
 
-    private $controller;
-    private $method;
+    private $controller = "home";
+    private $method = "index";
     private $params = [];
 
     public function __construct(){
@@ -16,14 +16,15 @@ class app{
     private function url(){
         if(!empty($_SERVER['QUERY_STRING'])){
             $url = explode("/",$_SERVER['QUERY_STRING']);
-        
+            
             // controller 
             $this->controller = isset($url[0]) ? $url[0] : "home";
-            
             // method 
             $this->method = isset($url[1]) ? $url[1] : "index";
             // params
-            $this->params = isset($url[2]) ? $url[2] : [];
+            unset($url[0],$url[1]);
+            
+            $this->params = array_values($url);
         }
     }
 
