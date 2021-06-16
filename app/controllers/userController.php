@@ -29,7 +29,7 @@ class userController extends controller{
         if(!empty($userdata)){
           $_SESSION['user'] = $userdata;
           $_SESSION['error'] = [];
-          helper::redirect("category/index");
+          helper::redirect("dashboard/index");
         }else{
           $_SESSION['error'][] = "user and password not valid";
           helper::redirect("user/login");

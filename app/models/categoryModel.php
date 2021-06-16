@@ -11,8 +11,9 @@ class categoryModel extends db
      return  $this->Insert($data);
    }
    public function getAllCategory(){
-     return $this->All("SELECT * FROM `category`");
-   }
+    $category =  $this->All("SELECT * FROM `category`");
+      return $category;
+    }
 
    public function deleteCategory($id){
      return $this->delete($id);
@@ -23,5 +24,8 @@ class categoryModel extends db
 
    public function UpdateCategory($data,$id){
       return $this->update($data,$id);
+   }
+   public function numcategory(){
+     return $this->select_count();
    }
 }

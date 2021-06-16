@@ -8,7 +8,7 @@ define('MODELS', APP.DS."models".DS);
 define('VIEWS', APP.DS."views".DS);
 define('CORE', APP.DS."core".DS);
 define('VENDOR', ROOT.DS."vendor".DS);
-define('URL', "http://localhost/mvc/public");
+define('URL', "http://localhost:8080/mvc/public");
 
 define('DSN', 'mysql:host=localhost;dbname=cms');
 define('DB_USER', 'root');

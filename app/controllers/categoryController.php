@@ -30,9 +30,11 @@ class categoryController extends controller{
       }
 
       public function postadd(){
+
         if($this->model->addNewCategory($_POST)){
           helper::redirect("category/index");
         }
+        
       }
 
       public function delete($id){

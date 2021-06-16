@@ -22,5 +22,19 @@
 <script src="<?= URL; ?>/dashboard/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?= URL; ?>/dashboard/dist/js/demo.js"></script>
+<script src="<?= URL; ?>/dashboard/plugins/summernote/summernote-bs4.min.js"></script>
+<script>
+  $(function () {
+    // Summernote
+    $('#summernote').summernote()
+
+    // CodeMirror
+    CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
+      mode: "htmlmixed",
+      theme: "monokai"
+    });
+  })
+</script>
+
 </body>
 </html>
